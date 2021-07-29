@@ -33,3 +33,19 @@ const name = "test";
 const age = 30;
 const message = `私の名前は${name}です。年齢は${age}です。`;
 console.log(message);
+
+// 関数
+const func1 = function (str) {
+  return str;
+};
+console.log(func1("従来の関数です"));
+
+// アロー関数
+const func2 = (str) => {
+  return str;
+};
+console.log(func2("アロー関数です"));
+/** 注意点
+ * 引数の「()」は省略できる
+ * returnと{}は省略できる
+ */
