@@ -79,5 +79,40 @@
  * default値、引数
  * (変数 = 初期値)
  */
-const sayHello = (name = "gest") => console.log(`こんにちは！${name}さん！`);
-sayHello();
+// const sayHello = (name = "gest") => console.log(`こんにちは！${name}さん！`);
+// sayHello();
+
+/**
+ * スプレッド公文[...配列]
+ * 配列を展開し順番に処理する
+ */
+// 配列の展開
+// const arr1 = [1, 2];
+// console.log(arr1);
+// console.log(...arr1);
+
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// sumFunc(arr1[0], arr1[1]);
+// sumFunc(...arr1);
+
+// 配列をまとめて受け取る
+// const arr2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arr3] = arr2;
+// console.log(num1);
+// console.log(num2);
+// console.log(arr3);
+
+/**
+ * 配列のコピー、結合
+ *  */
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+// コピー
+// const arr6 = arr4;の場合、参照先を渡すだけなので、arr6を変更するとarr4も変更される
+const arr6 = [...arr4];
+console.log(arr6);
+
+// 結合
+const arr7 = [...arr4, ...arr5];
+console.log(arr7);
