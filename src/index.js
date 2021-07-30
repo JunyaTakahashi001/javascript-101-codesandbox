@@ -105,14 +105,49 @@
 /**
  * 配列のコピー、結合
  *  */
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
 // コピー
 // const arr6 = arr4;の場合、参照先を渡すだけなので、arr6を変更するとarr4も変更される
-const arr6 = [...arr4];
-console.log(arr6);
+// const arr6 = [...arr4];
+// console.log(arr6);
 
 // 結合
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
+
+/**
+ * map,filterを使った配列の処理
+ */
+// 従来のroop処理
+const nameArr = ["田中", "山田", "高橋"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+
+// map(配列を単純にループする方法　※第二引数でindex番号が受け取れる)
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+// map（リターンされた値に基づいて新しい配列を生成する）
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+
+// filter（return文に一致するものだけ取り出して配列に格納する）
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 0;
+// });
+// console.log(newNumArr);
+
+// sampleコード
+const newNameArr = nameArr.map((name) => {
+  if (name === "高橋") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr);
