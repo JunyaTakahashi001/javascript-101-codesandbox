@@ -143,11 +143,33 @@ const nameArr = ["田中", "山田", "高橋"];
 // console.log(newNumArr);
 
 // sampleコード
-const newNameArr = nameArr.map((name) => {
-  if (name === "高橋") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "高橋") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
+
+/**
+ * 三項演算子
+ * ある条件　？　条件がtrueの時 : 'falseです';
+ */
+// sample1
+// const val1 = 1 > 0 ? "trueです" : "falseです";
+// console.log(val1);
+
+// sample2
+//[typeof]変数の型を返す
+// [toLocaleString]数値を3桁区切りで[,]をつける
+// const num = 1300;
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力して下さい";
+// console.log(formattedNum);
+
+// sample3　returnで三項演算子を使用する
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています！！" : "許容範囲です";
+};
+console.log(checkSum(50, 40));
