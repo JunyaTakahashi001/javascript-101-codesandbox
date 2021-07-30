@@ -169,7 +169,31 @@ const nameArr = ["田中", "山田", "高橋"];
 // console.log(formattedNum);
 
 // sample3　returnで三項演算子を使用する
-const checkSum = (num1, num2) => {
-  return num1 + num2 > 100 ? "100を超えています！！" : "許容範囲です";
-};
-console.log(checkSum(50, 40));
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています！！" : "許容範囲です";
+// };
+// console.log(checkSum(50, 40));
+
+/**
+ * 論理演算子の意味 || &&
+ */
+// よく使う方法
+// const flag1 = true;
+// const flag2 = false;
+
+// if (flag1 || flag2) {
+//   console.log("1または2がtrueになります");
+// }
+// if (flag1 && flag2) {
+//   console.log("1も2もtrueになります");
+// }
+
+// [||]は左側がfalseなら右側を返す
+// const num = null;
+// const fee = num || "金額未設定です";
+// console.log(fee);
+
+// [&&]は左側がtrueなら右側を返す
+const num2 = null;
+const fee2 = num2 && "なにか設定されました";
+console.log(fee2);
